@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapepr {
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto)/1fr;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+  background: #794f45;
+  grid-area: header;
+  padding: 15px;
+  display: grid;
+  align-items: center;
+  grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+}
+.header__logo {
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  grid-column: 2/3;
+}
+.header__menu {
+  grid-column: 3/4;
+}
+.header__list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: end;
+  list-style: none;
+}
+.header__link {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.main {
+  grid-area: main;
+  padding: 30px 15px;
+  display: grid;
+  grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+}
+.main .sidebar {
+  grid-column: 2/3;
+  background: #7a956b;
+  padding: 15px;
+}
+.main .sidebar__list {
+  list-style: none;
+}
+.main .sidebar__list li {
+  margin: 0px 0px 15px 0px;
+}
+.main .sidebar__link {
+  color: #fff;
+  font-size: 20px;
+}
+.main .content {
+  grid-column: 3/4;
+  padding: 0px 0px 0px 30px;
+}
+
+.footer {
+  background: #77608d;
+}
